@@ -1,3 +1,5 @@
+# crawling the web starting from seed page with max_pages parameter
+
 # get_page() procedure for getting the contents os webpage as a string
 
 import urllib
@@ -52,6 +54,6 @@ def crawl_web(seed,max_pages):
     return crawled
 
 
-# Running the program with given seed pagec and max_pages
+# Running the program with given seed pages and max_pages
 print crawl_web("http://xkcd.com/353",10)
 

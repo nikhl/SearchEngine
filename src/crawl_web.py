@@ -1,3 +1,5 @@
+# just blindly crawling the web starting from seed page
+
 # get_page() procedure for getting the contents os webpage as a string
 
 import urllib
@@ -40,18 +42,17 @@ def get_all_links(page):
 
 
 # for crawling the web, constrained on the maximum different pages crawled
-def crawl_web(seed,max_pages):
+def crawl_web(seed):
     tocrawl = [seed]
     crawled = []
     while tocrawl:
-        page = tocrawl.pop()
-        if len(crawled) < max_pages :            
-            if page not in crawled:
-                union(tocrawl, get_all_links(get_page(page)))
-                crawled.append(page)
+        page = tocrawl.pop()                    
+        if page not in crawled:
+            union(tocrawl, get_all_links(get_page(page)))
+            crawled.append(page)
     return crawled
 
 
 # Running the program with given seed pagec and max_pages
-print crawl_web("http://xkcd.com/353",10)
+print crawl_web("http://www.udacity.com/cs101x/index.html")
 

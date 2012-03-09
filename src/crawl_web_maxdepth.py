@@ -1,3 +1,5 @@
+# crawling the web starting from seed page with max_depth parameter
+
 """
 A points to B, C, D
 B points to H, I
