@@ -23,6 +23,7 @@ def union(p,q):
     for e in q:
         if e not in p:
             p.append(e)
+    return p
 
 
 # given a seed page, it will return all the links in that page
