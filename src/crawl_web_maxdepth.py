@@ -108,4 +108,4 @@ def crawl_web(seed,max_depth):
     
     
 
-print crawl_web("http://xkcd.com/353",1)
+print crawl_web("http://xkcd.com/353",2)
