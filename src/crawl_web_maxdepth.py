@@ -16,7 +16,7 @@ max_depth=0: A
 max_depth=1: A,B,C,D
 max_depth=2: A,B,C,D,E,F,G,H,I
 max_depth=3: A,B,C,D,E,F,G,H,I,J,K,M
-max_depth=4: A,B,C,D,E,F,G,H,I,J,K,M,L
+max_depth=4: A,B,C,D,E,F,G,H,I,J,K,M,L  """
 
 def get_page(url):
     if url == "A":
@@ -44,14 +44,9 @@ def get_page(url):
     elif url == "L":
         return 'nothing'
     elif url == "M":
-        return 'nothing'  """
+        return 'nothing'  
         
-import urllib
-def get_page(url):
-    try:
-        return urllib.urlopen(url).read()
-    except:
-        return ""
+
 
 def get_next_target(page):
     start_link = page.find('<a href=')
@@ -81,6 +76,7 @@ def get_all_links(page):
     return links
 
 
+
 def crawl_web(seed,max_depth):
     tocrawl = [seed]
     crawl_with_depth = []
@@ -108,4 +104,4 @@ def crawl_web(seed,max_depth):
     
     
 
-print crawl_web("http://xkcd.com/353",2)
+print crawl_web("A",4)

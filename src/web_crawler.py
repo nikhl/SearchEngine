@@ -1,6 +1,6 @@
 # just blindly crawling the web starting from seed page
 
-# get_page() procedure for getting the contents os webpage as a string
+# get_page() procedure for getting the contents of a webpage as a string
 
 import urllib
 def get_page(url):
