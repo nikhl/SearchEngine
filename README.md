@@ -1,4 +1,4 @@
-<table border = 0px >
+<table>
 	<tr>
 		<td>
 			1
